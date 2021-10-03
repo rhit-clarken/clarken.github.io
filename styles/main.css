@@ -36,6 +36,7 @@ body #about img {
 }
 
 p {
+    color: var(--heading-color);
     max-width: 50em;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
@@ -88,7 +89,7 @@ body nav a {
     color: var(--heading-color);
     font-weight: 500;
     text-decoration-color: var(--heading-color);
-
+    
 }
 
 body nav a:hover {
@@ -104,6 +105,21 @@ body > nav ul {
 body > nav ul li{
     display: inline-block;
     padding-right: 1em;
+}
+
+body > nav #theme{
+    background-color: transparent;
+    border: 0;
+    line-height: 1.5;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+    justify-self: right;
+}
+body > nav #theme:hover{
+    background-color: rgba(var(--body-color), 0.7);
+    color: var(--bg-color);
+    cursor: pointer;
 }
 
 body > main {
@@ -149,4 +165,12 @@ body #portfolio ul #portfolioItems li img{
         flex-basis: 40%;
         padding-right: 2%;
     } 
+}
+
+.d-theme {
+    --light-color: 13, 13, 13;
+    --body-color: 183, 228, 199;
+    --heading-color: #ebe3d9;
+    --contrast-color: #8cacb3;
+    --bg-color: #404040;
 }
