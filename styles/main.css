@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Pridi&family=Roboto:wght@300;400&display=swap');
+:root {
+    --vertical-space: 2rem;
+    --horizontal-space: 3rem;
+
+    --light-color:242, 242, 242;
+    --body-color: 27, 67, 50;
+    --heading-color: #141C26;
+    --contrast-color: #73534C;
+    --bg-color: #BFBFBF;
+}
+
+body {
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--body-color);
+}
+h1, h2, h3 {
+    line-height: 1.2;
+    font-family: 'Pridi', serif;
+    color: var(--heading-color);
+}
+body main a {
+    color: var(--heading-color);
+    font-family: 'Pridi', serif;
+    text-decoration-color: var(--heading-color);
+}
+body main a:hover {
+    color: var(--contrast-color);
+    text-decoration-color: var(--contrast-color);
+}
+
+
+body #about img {
+    height: 20em;
+}
+
+p {
+    max-width: 50em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+body {
+    display: grid;
+    grid-template-areas: "head head"
+                        "nav nav"
+                        "main main"
+                        "foot foot";
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto auto 1fr auto;
+    background-color: var(--bg-color);
+    background-image: url("https://www.transparenttextures.com/patterns/noisy-grid.png");
+}
+
+@media screen and (min-width: 25em) {
+    body {
+        display: grid;
+        grid-template-areas: "head nav"
+                            "main main"
+                            "foot foot";
+        grid-template-columns: auto auto;                    
+        grid-template-rows: auto 1fr auto;
+    } 
+}
+
+body > * {
+   padding-left: var(--horizontal-space);
+   padding-right: var(--horizontal-space); 
+}
+
+body > header {
+    grid-area: head;
+    /* background-color: rgba(var(--body-color), 0.7); */
+}
+
+body header, body nav {
+    border-bottom: 1rem solid rgba(var(--body-color), 0.7);
+}
+
+body > nav {
+    grid-area: nav;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 1.5em;
+}
+
+body nav a {
+    color: var(--heading-color);
+    font-weight: 500;
+    text-decoration-color: var(--heading-color);
+
+}
+
+body nav a:hover {
+    color: rgba(var(--body-color), 0.7);
+    text-decoration-color: rgba(var(--body-color), 0.7);
+}
+
+body > nav ul {
+    list-style-type: none;
+    padding-top: 1em;
+}
+
+body > nav ul li{
+    display: inline-block;
+    padding-right: 1em;
+}
+
+body > main {
+    grid-area: main;
+    background-color: rgba(var(--light-color), 0.3);
+}
+
+body > footer {
+    grid-area: foot;
+    background-color: rgba(var(--body-color), 0.7);
+
+}
+
+header, footer {
+    padding-top: var(--vertical-space);
+    padding-bottom: var(--vertical-space);
+}
+
+header {
+    padding-bottom: 0;
+}
+
+header h1, footer h1 {
+    margin: 0;
+}
+
+/* not working? */
+/* body #portfolio ul #portfolioItems */
+ul{
+    display: flex;
+    /* look into this */
+    flex-wrap: wrap;
+    flex: 1;
+    list-style-type: none;
+    padding: 0;
+}
+body #portfolio ul #portfolioItems li img{
+    max-width: 100%;
+}
+
+@media screen and (min-width: 25em) {
+    body #portfolio ul #portfolioItems li {
+        flex-basis: 40%;
+        padding-right: 2%;
+    } 
+}
