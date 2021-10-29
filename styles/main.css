@@ -34,12 +34,12 @@ body main a:hover {
 #about img {
     height: 15em;
     display: inline;
-    float: left;
+    float: right;
     margin-bottom: var(--vertical-space);
     margin-right: var(--horizontal-space);
 }
 
-p {
+p, #aboutText {
     color: var(--heading-color);
     max-width: 50em;
     font-family: 'Roboto', sans-serif;
@@ -220,3 +220,28 @@ body #resume h3, h5, h6{
     font-weight: 500;
 }
 
+footer {
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* Following animation code from
+https://stackoverflow.com/questions/55227106/css-animation-text-sliding-left-to-right */
+.slide-right {
+    width: 100%;
+    overflow: hidden;
+    /* margin-left: 300px;
+    max-width: 500px */
+  }
+  
+  .slide-right ul {
+    animation: 1s slide-right .25s forwards;
+      transform:translateX(-100%);
+  }
+  
+  @keyframes slide-right {
+    to {
+      transform:translateX(0);
+    }
+  }
