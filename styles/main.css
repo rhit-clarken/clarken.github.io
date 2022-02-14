@@ -1,16 +1,254 @@
-@import url('https://fonts.googleapis.com/css2?family=Pridi&family=Roboto:wght@300;400&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Pridi&family=Roboto:wght@300;400&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;400&display=swap');
 :root {
     --vertical-space: 2rem;
     --horizontal-space: 3rem;
-
-    --light-color:242, 242, 242;
-    --body-color: 27, 67, 50;
-    --heading-color: #141C26;
-    --contrast-color: #73534C;
-    --bg-color: #BFBFBF;
+    --background-image: url("../images/bckgrd.jpg");
+    /* --light-color:242, 242, 242; */
+    --body-color: black;
+    --heading-color: black;
+    --contrast-color: lavender;
+    /* --bg-color: #BFBFBF; */
 }
 
 body {
+    background: var(--background-image) no-repeat center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    /* why does this work */
+    transition: background 0.5s linear;
+    -webkit-transition: background 0.5s linear;
+    font-family: 'Source Code Pro', monospace;
+    /* display: grid;
+    grid-template-areas: "space head space"
+                        "space main space"
+                        "space foot space"; */
+    /* grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto 1fr auto; */
+    /* display: flex;
+    flex-direction: column; */
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+}
+#body img {
+    height: 15em;
+    display: inline;
+    float: right;
+    background-color: var(--body-color);
+    padding: 4px;
+    /* margin-bottom: var(--vertical-space); */
+    margin-left: var(--horizontal-space);
+}
+h1{
+    line-height: 1.2;
+    font-size: 50px;
+    font-weight: 400;
+    color: var(--heading-color);
+}
+body > header {
+    /* grid-area: head; */
+    /* background-color: rgba(var(--body-color), 0.7); */
+    /* margin-bottom: var(--vertical-space); */
+    margin-left: var(--horizontal-space);
+    padding-left: 10%;
+    padding-top: 5%;
+    padding-right: 10%;
+}
+body > header > h1{
+    margin-bottom: 0;
+}
+body > nav {
+    /* grid-area: nav; */
+    margin-left: var(--horizontal-space);
+    margin-right: var(--horizontal-space);
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    /* font-family: 'Roboto', sans-serif; */
+    /* padding-top: 1.5em; */
+}
+body nav a {
+    color: var(--heading-color);
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.3em;
+    /* margin-bottom: 0.5em; */
+    
+}
+
+body nav a:hover {
+    background-color: var(--contrast-color);
+    color: var(--body-color);
+    /* text-decoration-color: var(--contrast-color); */
+}
+
+body > nav ul {
+    list-style-type: none;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    /* padding-top: 1em; */
+    /* padding-right: var(--horizontal-space); */
+}
+
+body > nav ul li{
+    margin-bottom: 0.5em;
+} 
+
+body > nav #theme{
+    background-color: transparent;
+    border: 0;
+    line-height: 1.5;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+    justify-self: right;
+}
+body > nav #theme:hover{
+    background-color: var(--contrast-color);
+    color: var(--body-color);
+    cursor: pointer;
+}
+body > main {
+    /* grid-area: main; */
+    /* width: 100%; */
+    /* min-height: 100vh; */
+    height: 100%;
+    margin-right: var(--horizontal-space);
+    margin-left: var(--horizontal-space);
+    /* font-family: 'Roboto', sans-serif; */
+    /* padding-top: 1.5em; */
+    padding-left: 10%;
+    padding-top: 5%;
+    padding-right: 10%;
+}
+body > footer {
+    /* grid-area: foot; */
+    /* font-family: 'Roboto', sans-serif; */
+    padding-top: 1.5em;
+}
+
+body > main > #aboutSection{
+    min-height: 75vh;
+}
+
+body > main > #portfolioSection > #portfolioItems{
+    min-height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+body > main > #portfolioSection > #portfolioItems > .pItem{
+    flex: none;
+    background: var(--contrast-color);
+    margin: 10px;
+    display: block;
+    height: 100%;
+    /* min-height: 100%; */
+    width: calc( (100% / 3) - 20px );
+    padding: 10px;
+}
+body > main > #portfolioSection > #portfolioItems > .pItem:hover{
+    margin-top: -3px;
+}
+body > main > #portfolioSection > #portfolioItems > .pItem > p{
+    color: black;
+}
+body > main > #portfolioSection > #portfolioItems > .pItem a {
+    color: var(--heading-color);
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.3em;
+    /* margin-bottom: 0.5em; */
+    
+}
+body > main > #portfolioSection > #portfolioItems > .pItem a:hover {
+    background-color: #ddd;
+    /* color: var(--body-color); */
+    /* text-decoration-color: var(--contrast-color); */
+}
+h2, h3, h5{
+    margin: 3px;
+}
+h6{
+    margin: 3px;
+    margin-bottom: 6px;
+}
+p, li, button{
+    color: var(--body-color)
+}
+
+body > main >#portfolioSection .pItem img {
+    max-width: 100%;
+}
+.d-theme {
+    --background-image: url("../images/darkbckgrd.jpg");
+    --body-color: white;
+    --heading-color: white;
+}
+body > main > #experienceSection{
+    min-height: 75vh;
+}
+
+#experiences{
+    display: grid;
+    grid-template-areas: "tabs content";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+}
+#tabs{
+    grid-area: tabs;
+    display: flex;
+    flex-flow: column;
+}
+#content{
+    grid-area: content;
+}
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    /* border: 1px solid var(--contrast-color); */
+    background-color: transparent;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: 2px solid var(--contrast-color);
+    /* border-top: 1px solid var(--contrast-color); */
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: var(--contrast-color);
+    color: black;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    background-color: var(--contrast-color);
+    /* color: black; */
+    /* border: 1px solid var(--contrast-color);
+    border-top: none; */
+  }
+  .tabcontent > p{
+      color: black;
+  }
+
+/* body {
     font-size: 18px;
     line-height: 1.5;
     color: var(--body-color);
@@ -55,7 +293,6 @@ body {
     grid-template-columns: 1fr 5fr;
     grid-template-rows: auto auto 1fr auto;
     background-color: var(--bg-color);
-    background-image: url("https://www.transparenttextures.com/patterns/noisy-grid.png");
 }
 
 @media screen and (min-width: 25em) {
@@ -77,7 +314,7 @@ body > * {
 body > header {
     grid-area: head;
     /* background-color: rgba(var(--body-color), 0.7); */
-}
+/* }
 
 body header, body nav {
     border-bottom: 1rem solid rgba(var(--body-color), 0.7);
@@ -222,21 +459,21 @@ body #resume h3, h5, h6{
 
 footer {
     /* position: static; */
-    bottom: 0;
+    /* bottom: 0; */
     /* width: 100%; */
-}
+/* } */
 
 
 /* Following animation code from
 https://stackoverflow.com/questions/55227106/css-animation-text-sliding-left-to-right */
-.slide-right {
-    width: 100%;
-    overflow: hidden;
+/* .slide-right { */
+    /* width: 100%; */
+    /* overflow: hidden; */
     /* margin-left: 300px;
     max-width: 500px */
-  }
+  /* } */
   
-  .slide-right ul {
+  /* .slide-right ul {
     animation: 1s slide-right .25s forwards;
       transform:translateX(-100%);
   }
@@ -244,5 +481,5 @@ https://stackoverflow.com/questions/55227106/css-animation-text-sliding-left-to-
   @keyframes slide-right {
     to {
       transform:translateX(0);
-    }
-  }
+    } */
+  /* }  */
