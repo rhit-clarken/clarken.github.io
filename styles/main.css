@@ -34,11 +34,11 @@ body {
 #body img {
     height: 15em;
     display: inline;
-    float: right;
+    float: left;
     background-color: var(--body-color);
     padding: 4px;
     /* margin-bottom: var(--vertical-space); */
-    margin-left: var(--horizontal-space);
+    margin-right: var(--horizontal-space);
 }
 h1{
     line-height: 1.2;
@@ -133,29 +133,32 @@ body > main > #aboutSection{
     min-height: 75vh;
 }
 
-body > main > #portfolioSection > #portfolioItems{
+#portfolioSection > #portfolioItems{
     min-height: 100vh;
     display: flex;
     flex-flow: row wrap;
 }
 
-body > main > #portfolioSection > #portfolioItems > .pItem{
+#portfolioSection > #portfolioItems > .pItem{
     flex: none;
     background: var(--contrast-color);
     margin: 10px;
+    
     display: block;
     height: 100%;
     /* min-height: 100%; */
     width: calc( (100% / 3) - 20px );
     padding: 10px;
 }
-body > main > #portfolioSection > #portfolioItems > .pItem:hover{
+#portfolioSection > #portfolioItems > .pItem:hover{
     margin-top: -3px;
+    /* TODO: add shadow for light and dark mode */
+    /* box-shadow: 10px 5px 5px rgba(var(--body-color), 0.3); */
 }
-body > main > #portfolioSection > #portfolioItems > .pItem > p{
+#portfolioSection > #portfolioItems > .pItem > p{
     color: black;
 }
-body > main > #portfolioSection > #portfolioItems > .pItem a {
+#portfolioSection > #portfolioItems > .pItem a {
     color: var(--heading-color);
     font-weight: 500;
     text-decoration: none;
@@ -163,7 +166,7 @@ body > main > #portfolioSection > #portfolioItems > .pItem a {
     /* margin-bottom: 0.5em; */
     
 }
-body > main > #portfolioSection > #portfolioItems > .pItem a:hover {
+#portfolioSection > #portfolioItems > .pItem a:hover {
     background-color: #ddd;
     /* color: var(--body-color); */
     /* text-decoration-color: var(--contrast-color); */
