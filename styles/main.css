@@ -136,14 +136,13 @@ body > main > #aboutSection{
 #portfolioSection > #portfolioItems{
     min-height: 100vh;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row /*wrap*/;
 }
 
 #portfolioSection > #portfolioItems > .pItem{
     flex: none;
     background: var(--contrast-color);
-    margin: 10px;
-    
+    margin: 5px;
     display: block;
     height: 100%;
     /* min-height: 100%; */
