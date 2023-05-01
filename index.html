@@ -35,10 +35,11 @@
 
     <div id="aboutSection" class="fade-in">
       <h1>//about</h1>
-      <img src="images/IMG_0228 (2).JPG" alt="Endia Clark Senior Photo">
+      <img src="images/20230221_070411.jpg" alt="Endia Clark Senior Photo">
       <div id="aboutText">
         <p id="helloWorld">Hello World.</p>
-        <p>I'm Endia Clark, a Sophomore International Computer Science student at Rose-Hulman Institute of Technology.
+        <p>I'm Endia Clark, a Junior International Computer Science student at Rose-Hulman Institute of Technology.
+          I am currently studying abroad in Germany for the 2022-2023 school year at Ulm University of Applied Sciences.
           <!-- This is actually a portfolio site I am making for one of my classes. -->
           I enjoy using code to solve problems and, in the future, I hope to develop technogies that can solve problems
           for many people.
@@ -46,7 +47,7 @@
           I am also looking for internship opportunies as they become available.</p>
         <p id="factsTitle">Fun Facts:</p>
         <ul id="funFacts">
-          <li>I am learning German on my own so I can eventually study abroad in Germany.</li>
+          <!-- <li>I am learning German on my own so I can eventually study abroad in Germany.</li> -->
           <li>I can play the piano and I am slowly teaching myself to play guitar.</li>
         </ul>
       </div>
@@ -56,23 +57,36 @@
       <h1>//experience</h1>
       <div id="experiences">
         <div id="tabs" class="tab">
-          <button class="tablinks" onclick="openTab(event, 'STEM-Away')" id="defaultOpen">STEM-Away</button>
+          <button class="tablinks" onclick="openTab(event, 'Amazon')" id="defaultOpen">Amazon</button>
+          <button class="tablinks" onclick="openTab(event, 'STEM-Away')">STEM-Away</button>
           <button class="tablinks" onclick="openTab(event, 'Rose-Hulman')">Rose-Hulman</button>
           <button class="tablinks" onclick="openTab(event, 'Google')">Google</button>
         </div>
         <div id="content" class="tab-content">
+          <div id="Amazon" class="tabcontent">
+            <h5>Software Development Engineer Intern, Key Web Front-End Team</h5>
+            <h6>June 2022 -August 2022</h6>
+            <p>Completed UX designs and front-end development for a secure delivery access point location accuracy feature on amazon.com and the Amazon Mobile app
+              <br>Learned basic React and Typescript for project completion
+              <br>Lead UX design critiques with visual designers
+              <br>Held engineering design reviews for the front-end code and architecture
+              <br>Demoed new feature successfully end-to-end to internship stakeholders
+              </p>
+          </div>
+        <div id="content" class="tab-content">
           <div id="STEM-Away" class="tabcontent">
             <h5>UX/UI Pathway Intern, Level 2</h5>
-            <h6>June-July 2021</h6>
+            <h6>June 2021 -July 2021</h6>
             <!-- <h6>STEM-AWAY</h6> -->
             <p>Collaborate with Bioinformatics Pathway to design a tangible and well researched skill development
               software by incorporating user research and design methods<br>
-              Collaborate with Bioinformatics Pathway to design a tangible and well researched skill development
-              software by incorporating user research and design methods</p>
+              Coordinated with teammates, project leads, and project managers to create a product
+              <br>Generated an interactive Figma prototype to showcase the final product
+              </p>
           </div>
           <div id="Rose-Hulman" class="tabcontent">
             <h5>Teaching Assistant</h5>
-            <h6>November 2020-Present</h6>
+            <h6>November 2020 - May 2022</h6>
             <!-- <h6>CSSE120 Intro to Software Development, Rose-Hulman Institute of Technology</h6> -->
             <p>Teach students using a learning centered approach<br>
               Assist pro fessor with grading and individual student assistance<br>
@@ -82,8 +96,10 @@
             <h5>Google Computer Science Summer Institute</h5>
             <h6>July 2020</h6>
             <!-- <h6>Google</h6> -->
-            <p>Study lectures and at home work from Google instructors<br>
-              Participate with peers and Google Advisors on projects</p>
+            <p>Expanded knowledge of JavaScript, HTML, and CSS using lectures and at-home work from Google instructors
+              <br>Participated with peers and Google Advisors on 10 small projects over the first 3 weeks of program
+              <br>Worked with two partners to build a water tracking web app using Glitch.com
+              </p>
           </div>
         </div>
       </div>
@@ -92,6 +108,15 @@
     <div id="portfolioSection" class="fade-in">
       <h1>//projects</h1>
       <div id="portfolioItems">
+        <div class="pItem">
+          <h2>Qeasy Quiz App</h2>
+          <a href="https://github.com/Sule57/queasy" target="_blank" rel="noopener noreferrer"><i
+              class="fa-brands fa-github fa-xl"></i></a>
+          <h3>#Flutter #Figma #Firebase #GitHub #Slack #Monday</h3>
+          <!-- <img src="images/favoritethings.PNG" alt="Favorite Things Screenshot"> -->
+          <p>A cross-platform quiz app allowing users to create and play their own and public quizzes. Users are able to share their quizzes with a unique key.</p>
+          <!-- <a href="https://clarken-favoritethings.web.app/">Link to Project</a> -->
+        </div>
         <div class="pItem">
           <h2>The 100</h2>
           <a href="https://clarken-the100.web.app/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i></a>
