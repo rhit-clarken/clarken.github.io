@@ -38,6 +38,18 @@ main = function () {
 
 };
 
+openNav = function() {
+    document.getElementById("sidenav").style.width = "250px";
+    document.getElementById("content").style.marginRight = "250px";
+    document.getElementById("sidenavBar").style.display = "none";
+}
+
+closeNav = function() {
+    document.getElementById("sidenav").style.width = "0";
+    document.getElementById("content").style.marginRight = "234px";
+    document.getElementById("sidenavBar").style.display = "block";
+}
+
 changeTheme = function () {
     if (localStorage.getItem('data-item') == "bright") {
         // console.log(currentTheme);
@@ -61,7 +73,14 @@ changeTheme = function () {
 
 openTab = function (event, id) {
     // Declare all variables
-    var i, tabcontent, tablinks, activeIndex;
+    var i, tabcontent, tablinks, closeAll;
+
+    // Note future idea: close tab on click if open
+    if(document.getElementById(id).style.display == "block"){
+        closeAll = true;
+    } else {
+        closeAll = false;
+    }
 
     // Get all elements with class="tabcontent" and hide them
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -76,13 +95,15 @@ openTab = function (event, id) {
     }
 
     // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(id).style.display = "block";
-    event.currentTarget.className += " active";
+    if(!closeAll){
+        document.getElementById(id).style.display = "block";
+        event.currentTarget.className += " active";
+    }
 }
 
 window.onload = function () {
     console.log("page loaded");
-    document.getElementById("defaultOpen").click();
+    // document.getElementById("defaultOpen").click();
     if (localStorage.getItem('data-item') == 'dark') {
         document.querySelector("body").setAttribute("class", "d-theme");
         document.querySelector("#theme").dataset.value = "dark";

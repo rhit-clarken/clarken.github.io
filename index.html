@@ -6,10 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Endia Clark Portfolio</title>
   <link rel="stylesheet" href="styles/normalize.css" />
-  <link rel="stylesheet" href="styles/main.css" />
-  <!-- <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png"> -->
+  <link rel="stylesheet" href="styles/newmain.css" />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon (1).png">
-  <!-- <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png"> -->
   <!-- <link rel="manifest" href="/site.webmanifest"> -->
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
   <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/> -->
@@ -17,135 +15,174 @@
 
 <body class="l-theme" id="body">
   <header>
-    <h1>Endia Clark</h1>
+    <h3 class="anton-h3">ENDIA CLARK</h3>
   </header>
-  <nav>
-    <ul>
-      <li><a href="#aboutSection">//about</a></li>
-      <li><a href="#experienceSection">//experience</a></li>
-      <li><a href="#portfolioSection">//projects</a></li>
-      <li><button type="button" id="theme" data-value="bright">too bright?</button></li>
-      <li><a href="https://github.com/rhit-clarken" target="_blank" rel="noopener noreferrer"><i
-            class="fa-brands fa-github fa-xl"></i></a>&nbsp;&nbsp;<a
-          href="https://www.linkedin.com/in/endia-clark-3590821b4" target="_blank" rel="noopener noreferrer"><i
-            class="fa-brands fa-linkedin fa-xl"></i></a></li>
-    </ul>
-  </nav>
-  <main>
-
-    <div id="aboutSection" class="fade-in">
-      <h1>//about</h1>
-      <img src="images/20230221_070411.jpg" alt="Endia Clark Senior Photo">
-      <div id="aboutText">
-        <p id="helloWorld">Hello World.</p>
-        <p>I'm Endia Clark, a Senior International Computer Science student at Rose-Hulman Institute of Technology.
-          I am currently studying for my final year of undergraduate studies after having studied in Germany for the 2022-2023 school year at Ulm University of Applied Sciences.
-          I am looking forward to graduating in May 2024.
-          <!-- This is actually a portfolio site I am making for one of my classes. -->
-          I enjoy using code to solve problems and, in the future, I hope to develop technogies that can solve problems
-          for many people.
-          Right now I am trying to learn as much as possible while I have the opportuniy.
-          I am also looking for internship opportunies as they become available.</p>
-        <p id="factsTitle">Fun Facts:</p>
-        <ul id="funFacts">
-          <!-- <li>I am learning German on my own so I can eventually study abroad in Germany.</li> -->
-          <li>I can play the piano and I am slowly teaching myself to play guitar.</li>
-        </ul>
+  <div id="content" class="content">
+    <span id="sidenavBar" onclick="openNav()">&#9776;</span>
+    <div id="sidenav" class="sidenav">
+      <span class="closebtn space-grotesk-p" onclick="closeNav()">&times;</span>
+      <ul>
+        <li class="space-grotesk-p"><a href="#main">HOME</a></li>
+        <li class="space-grotesk-p"><a href="#experienceSection">EXPERIENCE</a></li>
+        <li class="space-grotesk-p"><a href="#projectSection">PROJECTS</a></li>
+        <li class="space-grotesk-p"><button type="button" id="theme" data-value="bright">too bright?</button></li>
+        <li class="space-grotesk-p"><a href="https://github.com/rhit-clarken" target="_blank" rel="noopener noreferrer"><i
+          class="fa-brands fa-github fa-xl"></i></a>&nbsp;&nbsp;<a
+        href="https://www.linkedin.com/in/endia-clark-3590821b4" target="_blank" rel="noopener noreferrer"><i
+          class="fa-brands fa-linkedin fa-xl"></i></a></li>
+      </ul>
+    </div>
+    <div id="main">
+      <h1 class="anton-h1">HELLO, WORLD!</h1>
+      <div id="mainContent">
+        <img class="main-item1" src="images/20230221_070411.jpg" alt="Endia Clark Profile Photo">
+        <div class="main-item2">
+          <h3 class="space-grotesk-h3">Imporving Human Experience with Computer Science</h3>
+          <p class="space-grotesk-p">I'm Endia Clark, a Senior International Computer Science student at Rose-Hulman Institute of Technology.
+            I am currently studying for my final year of undergraduate studies after having studied in Germany for the 2022-2023 school year at Ulm University of Applied Sciences.
+            I am looking forward to graduating in May 2024. I enjoy using code to solve problems and, in the future, I hope to develop technogies that can solve problems
+            for many people. Right now, I am looking for full-time opportunies with a June 2024 start date.</p>
+        </div>
       </div>
     </div>
-
     <div id="experienceSection">
-      <h1>//experience</h1>
-      <div id="experiences">
-        <div id="tabs" class="tab">
-          <button class="tablinks" onclick="openTab(event, 'Amazon')" id="defaultOpen">Amazon</button>
-          <button class="tablinks" onclick="openTab(event, 'STEM-Away')">STEM-Away</button>
-          <button class="tablinks" onclick="openTab(event, 'Rose-Hulman')">Rose-Hulman</button>
-          <button class="tablinks" onclick="openTab(event, 'Google')">Google</button>
-        </div>
-        <div id="content" class="tab-content">
-          <div id="Amazon" class="tabcontent">
-            <h5>Software Development Engineer Intern, Key Web Front-End Team</h5>
-            <h6>June 2022 -August 2022</h6>
-            <p>Completed UX designs and front-end development for a secure delivery access point location accuracy feature on amazon.com and the Amazon Mobile app
-              <br><br>Learned basic React and Typescript for project completion
-              <br><br>Lead UX design critiques with visual designers
-              <br><br>Held engineering design reviews for the front-end code and architecture
-              <br><br>Demoed new feature successfully end-to-end to internship stakeholders
-              </p>
-          </div>
-        <div id="content" class="tab-content">
-          <div id="STEM-Away" class="tabcontent">
-            <h5>UX/UI Pathway Intern, Level 2</h5>
-            <h6>June 2021 -July 2021</h6>
-            <!-- <h6>STEM-AWAY</h6> -->
-            <p>Collaborate with Bioinformatics Pathway to design a tangible and well researched skill development
-              software by incorporating user research and design methods<br><br>
-              Coordinated with teammates, project leads, and project managers to create a product
-              <br><br>Generated an interactive Figma prototype to showcase the final product
-              </p>
-          </div>
+      <h1 class="anton-h1">EXPERIENCE</h1>
+      <div id="tabs">
+        <div class="tab-solo tab-first">
+          <button class="tablinks" onclick="openTab(event, 'Rose-Hulman')" id="defaultOpen">
+            <div class="tab-name">
+              <h4 class="space-grotesk-tabs-h4">Rose-Hulman</h4>
+              <h5 class="space-grotesk-tabs-h5">Teaching Assistant</h5>
+            </div>
+            <div class="tab-date">
+              <h5 class="space-grotesk-tabs-h5">Winter 2020 - Present</h5>
+            </div>
+          </button>
           <div id="Rose-Hulman" class="tabcontent">
-            <h5>Teaching Assistant</h5>
-            <h6>November 2020 - May 2022</h6>
-            <!-- <h6>CSSE120 Intro to Software Development, Rose-Hulman Institute of Technology</h6> -->
-            <p>Teach students using a learning centered approach<br><br>
-              Assist pro fessor with grading and individual student assistance<br><br>
-              Maintain knowledge on subject matter and software</p>
+            <ul class="space-grotesk-p">
+              <li>Teach students using a learning centered approach</li>
+              <li>Assist professor with grading and individual student assistance</li>
+              <li>Maintain knowledge on subject matter and software</li>
+            </ul>
           </div>
+        </div>
+        <div class="tab-solo">
+          <button class="tablinks" onclick="openTab(event, 'Amazon')" id="defaultOpen">
+            <div class="tab-name">
+              <h4 class="space-grotesk-tabs-h4">Amazon</h4>
+              <h5 class="space-grotesk-tabs-h5">Software Development Engineer Intern</h5>
+            </div>
+            <div class="tab-date">
+              <h5 class="space-grotesk-tabs-h5">Summer 2022</h5>
+            </div>
+          </button>
+          <div id="Amazon" class="tabcontent">
+            <ul class="space-grotesk-p">
+              <li>Completed UX designs and front-end development for a secure delivery access point location accuracy feature on amazon.com and the Amazon Mobile app</li>
+              <li>Learned basic React and Typescript for project completion</li>
+              <li>Lead UX design critiques with visual designers</li>
+              <li>Held engineering design reviews for the front-end code and architecture</li>
+              <li>Demoed new feature successfully end-to-end to internship stakeholders</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-solo">
+          <button class="tablinks" onclick="openTab(event, 'STEM-Away')" id="defaultOpen">
+            <div class="tab-name">
+              <h4 class="space-grotesk-tabs-h4">STEM-Away</h4>
+              <h5 class="space-grotesk-tabs-h5">UX/UI Pathway Intern, Level 2</h5>
+            </div>
+            <div class="tab-date">
+              <h5 class="space-grotesk-tabs-h5">Summer 2021</h5>
+            </div>
+          </button>
+          <div id="STEM-Away" class="tabcontent">
+            <ul class="space-grotesk-p">
+              <li>Collaborate with Bioinformatics Pathway to design a tangible and well researched biology skill development
+              software by incorporating user research and design methods</li>
+              <li>Coordinated with teammates, project leads, and project managers to create a product</li>
+              <li>Generated an interactive Figma prototype to showcase the final product</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-solo">
+          <button class="tablinks" onclick="openTab(event, 'Google')" id="defaultOpen">
+            <div class="tab-name">
+              <h4 class="space-grotesk-tabs-h4">Google</h4>
+              <h5 class="space-grotesk-tabs-h5">Google Computer Science Summer Institute</h5>
+            </div>
+            <div class="tab-date">
+              <h5 class="space-grotesk-tabs-h5">Summer 2020</h5>
+            </div>
+          </button>
           <div id="Google" class="tabcontent">
-            <h5>Google Computer Science Summer Institute</h5>
-            <h6>July 2020</h6>
-            <!-- <h6>Google</h6> -->
-            <p>Expanded knowledge of JavaScript, HTML, and CSS using lectures and at-home work from Google instructors
-              <br><br>Participated with peers and Google Advisors on 10 small projects over the first 3 weeks of program
-              <br><br>Worked with two partners to build a water tracking web app using Glitch.com
-              </p>
+            <ul class="space-grotesk-p">
+              <li>Expanded knowledge of JavaScript, HTML, and CSS using lectures and at-home work from Google instructors</li>
+              <li>Participated with peers and Google Advisors on 10 small projects over the first 3 weeks of program</li>
+              <li>Worked with two partners to build a water tracking web app using Glitch.com</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
-
-    <div id="portfolioSection" class="fade-in">
+    <div id="projectSection">
+      <h1 class="anton-h1">PROJECTS</h1>
+      <div id="portfolioItems">
+        <div class="p-item">
+          <h5 class="space-grotesk-tabs-h5">Qeasy Quiz App</h5>    
+          <p class="space-grotesk-p">A cross-platform quiz app allowing users to create and play their own and public quizzes. Users are able to share their quizzes with a unique key.</p>
+          <!-- <a class="space-grotesk-p" href="https://clarken-favoritethings.web.app/">Link to Project</a> -->
+          <a class="space-grotesk-p" href="https://github.com/Sule57/queasy" target="_blank" rel="noopener noreferrer"><i
+            class="fa-brands fa-github fa-xl"></i></a> 
+          <p class="space-grotesk-p tech">Technologies: Flutter, Figma, Firebase, GitHub, Slack, Monday</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <!-- <h3 class="anton-h3">CONTACT ME!</h3> -->
+  </footer>
+  
+    <!--<div id="portfolioSection" class="fade-in">
       <h1>//projects</h1>
       <div id="portfolioItems">
         <div class="pItem">
           <h2>Qeasy Quiz App</h2>
           <a href="https://github.com/Sule57/queasy" target="_blank" rel="noopener noreferrer"><i
               class="fa-brands fa-github fa-xl"></i></a>
-          <h3>#Flutter #Figma #Firebase #GitHub #Slack #Monday</h3>
+          <h3>#Flutter #Figma #Firebase #GitHub #Slack #Monday</h3>-->
           <!-- <img src="images/favoritethings.PNG" alt="Favorite Things Screenshot"> -->
-          <p>A cross-platform quiz app allowing users to create and play their own and public quizzes. Users are able to share their quizzes with a unique key.</p>
+          <!--<p>A cross-platform quiz app allowing users to create and play their own and public quizzes. Users are able to share their quizzes with a unique key.</p>-->
           <!-- <a href="https://clarken-favoritethings.web.app/">Link to Project</a> -->
-        </div>
+        <!--</div>
         <div class="pItem">
           <h2>The 100</h2>
           <a href="https://clarken-the100.web.app/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i></a>
           <a href="https://github.com/rhit-clarken/The100" target="_blank" rel="noopener noreferrer"><i
               class="fa-brands fa-github fa-xl"></i></a>
-          <h3>#HTML #CSS #JavaScript #Firebase Firestore #Firebase Auth #Bootstrap #VSC</h3>
+          <h3>#HTML #CSS #JavaScript #Firebase Firestore #Firebase Auth #Bootstrap #VSC</h3>-->
           <!-- <img src="images/favoritethings.PNG" alt="Favorite Things Screenshot"> -->
-          <p>A web app allowing users to create their own ranking of the top 100 Spotify Songs. Users are able to view a
-            song's music video and view other user's rankings.</p>
+          <!-- <p>A web app allowing users to create their own ranking of the top 100 Spotify Songs. Users are able to view a
+            song's music video and view other user's rankings.</p> -->
           <!-- <a href="https://clarken-favoritethings.web.app/">Link to Project</a> -->
-        </div>
+        <!--</div>
         <div class="pItem">
           <h2>Dinosaur Dash</h2>
           <a href="https://youtu.be/jLqSuxWuZD8" target="_blank" rel="noopener noreferrer"><i
               class="fa-brands fa-youtube fa-xl"></i></a>
-          <h3>#Python #PyGame #PyCharm</h3>
+          <h3>#Python #PyGame #PyCharm</h3> -->
           <!-- <img src="images/linearlightsout.PNG" alt="Linear Lights Out Screenshot"> -->
-          <p>A 2-player, 1 laptop python game based on Google Chrome's dino game. Two players can compete against each
-            other to reach a top score.</p>
+          <!-- <p>A 2-player, 1 laptop python game based on Google Chrome's dino game. Two players can compete against each
+            other to reach a top score.</p> -->
           <!-- <a href="https://clarken-linearlightsout.web.app/">Link to Project</a> -->
-        </div>
+        <!-- </div>
       </div>
     </div>
 
   </main>
-  <footer>
+  <footer> -->
     <!-- <p>Contact Me at clarken@rose-hulman.edu</p> -->
-  </footer>
+  <!--</footer> -->
 
   <script src="https://kit.fontawesome.com/8542311040.js" crossorigin="anonymous"></script>
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

@@ -3,7 +3,6 @@
 :root {
     --vertical-space: 2rem;
     --horizontal-space: 3rem;
-    --background-image: url("../images/bckgrd.jpg");
     /* --light-color:242, 242, 242; */
     --body-color: black;
     --heading-color: black;
@@ -12,7 +11,6 @@
 }
 
 body {
-    background: var(--background-image) no-repeat center;
     -webkit-background-size: cover;
     background-size: cover;
     /* why does this work */

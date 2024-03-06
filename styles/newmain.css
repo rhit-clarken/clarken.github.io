@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+:root {
+    --header-height: 120px;
+    --header-text-width: 234px;
+    --sidenav-padding-top: 40px;
+    --vertical-space: 2rem;
+    --horizontal-space: 3rem;
+    --background-color: white;
+    --contrast-color: black;
+    --accent-color: rgba(99, 112, 116, 0.5);
+}
+/* Font Classes */
+.anton-h3{
+    width: var(--header-text-width);
+    color: #000;
+    font-family: 'Anton', sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.96px;
+}
+.anton-h1{
+    color: #000;
+    font-family: 'Anton', sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.96px;
+}
+.space-grotesk-h3 {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #000;
+    font-size: 64px;
+    line-height: normal;
+  }
+.space-grotesk-p {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #000;
+    font-size: 24px;
+    line-height: normal;
+  }
+.space-grotesk-tabs-h4 {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--contrast-color);
+    font-size: 48px;
+    line-height: normal;
+  }
+.space-grotesk-tabs-h5 {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--contrast-color);
+    font-size: 32px;
+    line-height: normal;
+  }
+
+body {
+    padding: 40px;
+}
+
+/* Header */
+header {
+    position: fixed;
+    width: 100vh;
+    height: var(--header-height);
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+header span {
+    width: 40px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+/* Side Nav */
+#sidenavBar {
+    position: fixed;
+    top: 30px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+#sidenavBar:hover {
+    cursor: pointer;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: var(--accent-color);;
+    overflow-x: hidden;
+    padding-top: var(--header-height);
+    transition: 0.5s;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.sidenav .closebtn:hover {
+    cursor: pointer;
+}
+.sidenav li {
+    list-style-type: none;
+    padding: 10px;
+}
+.sidenav a {
+    text-decoration: none;
+    color: var(--contrast-color);
+}
+.sidenav a:hover {
+    background-color: var(--background-color);
+    color: var(--contrast-color);
+}
+.sidenav #theme{
+    background-color: transparent;
+    border: 0;
+    /* line-height: 1.5;
+    font-size: 1rem;*/
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    justify-self: left;
+}
+.sidenav #theme:hover{
+    background-color: var(--background-color);
+    color: var(--contrast-color);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 991px) {
+    :root{
+        --sidenav-padding-top: 15px;
+        --header-text-width: 115px;
+    }
+    /* .sidenav {padding-top: 15px;} */
+  }
+
+/* Content */
+.content {
+    margin-top: var(--header-height);
+    margin-left: var(--header-text-width);
+    margin-right: var(--header-text-width);
+    /* background-color: blue; */
+}
+
+/* Divs in Content */
+#main, #experienceSection, #projectSection {
+    transition: margin-right .5s;
+    padding: 20px;
+    padding-top: calc(var(--header-height) - 20px);
+    min-height: 100vh;
+}
+
+/* Main */
+@keyframes typing { 
+    0% { 
+        width: 0% 
+    } 
+    100% { 
+        width: 400px 
+    } 
+} 
+@keyframes blink { 
+    0%, 
+    100% { 
+        border-right: 2px solid transparent; 
+    } 
+    50% { 
+        border-right: 2px solid var(--contrast-color); 
+    } 
+} 
+#main h1{
+    margin: 0px;
+    white-space: nowrap; 
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0); 
+    animation: typing 4s steps(14, end) forwards, blink 1s infinite; 
+}
+#mainContent{
+    display: flex;
+}
+@media screen and (max-width: 1200px) {
+    #mainContent{
+        display: flex;
+        flex-direction: column;
+    }
+  }
+.main-item1{
+    min-width: 0;
+}
+.main-item2{
+    min-width:0;
+    max-width: 50%;
+}
+#mainContent h3{
+    margin:0;
+}
+#main img {
+    height: 680px;
+    min-width: 400px;
+    display: inline;
+    float: left;
+    padding: 4px;
+    margin-right: var(--horizontal-space);
+    margin-top: 14px;
+}
+
+/* Experience */
+#tabs .tab-solo {
+    border-style: solid;
+    border-width: 0px 0px 3px 0px;
+    border-color: var(--contrast-color);
+}
+#tabs .tab-first {
+    border-style: solid;
+    border-width: 3px 0px;
+    border-color: var(--contrast-color);
+}
+#tabs button{
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    padding: 10px;
+}
+#tabs button:hover{
+    cursor: pointer;
+    background-color: var(--accent-color);
+}
+#tabs h4, #tabs h5{
+    margin: 0;
+}
+#tabs .tablinks{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+#tabs .tab-name{
+    min-height:100%;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    text-justify: inter-word;
+}
+#tabs .tab-date{
+    min-height:100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+#tabs .tabcontent{
+    display: none;
+}
+
+/* Projects */
+#portfolioItems {
+    display: flex;
+}
+#portfolioItems .p-item{
+    flex: none;
+    border-style: solid;
+    border-width: 3px;
+    border-color: var(--contrast-color);
+    margin: 5px;
+    display: block;
+    height: 100%;
+    /* min-height: 100%; */
+    width: calc( (100% / 2) - 20px );
+    padding: 10px;
+}
+#portfolioItems .p-item h5{
+    margin: 0;
+}
+#portfolioItems .p-item .tech{
+    margin-bottom: 0;
+    background-clip: content-box, padding-box;
+    box-shadow: 0 0 0 10px var(--accent-color);
+    background-color: var(--accent-color);
+    font-size: 24px;
+}
+
+/* Footer */
+footer h3{
+    min-width: var(--header-text-width);
+}
