@@ -274,6 +274,8 @@ header span {
 /* Projects */
 #portfolioItems {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 #portfolioItems .p-item{
     flex: none;
@@ -282,10 +284,21 @@ header span {
     border-color: var(--contrast-color);
     margin: 5px;
     display: block;
-    height: 100%;
+    height: 1fr;
     /* min-height: 100%; */
-    width: calc( (100% / 2) - 20px );
+    width: calc( (100% / 2) - 50px );
     padding: 10px;
+    word-wrap: break-word;
+}
+#portfolioItems .p-item:hover{
+    /* margin: -3px; */
+    cursor: pointer;
+    background-color: var(--accent-color);
+}
+#portfolioItems .p-item .p-a{
+    height: 100%;
+    display: inline-grid;
+    grid-template-rows: auto auto auto;
 }
 #portfolioItems .p-item h5{
     margin: 0;
